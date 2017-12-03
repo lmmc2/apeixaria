@@ -50,7 +50,7 @@
 		</div>
 
 		<div class = visualizarPedidoRow>
-				<label>Produto:</label>	
+				<label id="labelListaProdutos">Produto:</label>	
 				<tr *ngFor="let a of produtos" name="listaProdutos">
 				   <td name="linhaProduto">{{a.nome}}</td>
 				   <td name="linhaProduto">{{a.}}</td>
@@ -58,14 +58,14 @@
 				</tr>
 		</div>
 
-		<label>Pago:
-			<input type="checkbox" ng-model="pago" ng-init="pago=false" />
-		</label>
+		<label id="labelCheckboxPago" >Pago:
+			<input id="checkboxPago" type="checkbox" ng-model="pago" ng-init="pago=false" />
+		</label id="labelCheckboxEntregue">
 		<label>Entregue: 
-			<input type="checkbox" ng-model="entregue" ng-init="entregue=false" />
-		</label>
+			<input id="checkboxEntregue" type="checkbox" ng-model="entregue" ng-init="entregue=false" />
+		</label id="labelCheckboxCancelado">
 		<label>Cancelado: 
-		 	<input type="checkbox" ng-model="cancelado" ng-init="cancelado=false" />
+		 	<input id="checkboxCancelado" type="checkbox" ng-model="cancelado" ng-init="cancelado=false" />
 		</label>
 		
 		 
