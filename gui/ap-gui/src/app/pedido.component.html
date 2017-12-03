@@ -1,0 +1,72 @@
+<div class = "pedidoContent">
+	<div class = "visualizarPedidoHeader">
+		<span>Pedido {{pedido.codigo}}</span>
+		<label id="labelPago" ng-if="pago">Pago</label>
+		<label id="labelEntregue" ng-if="entregue" >Entregue</label>
+		<label id="labelCancelado" ng-if="cancelado" >Cancelado</label>
+	</div>
+
+	<div class="visualizarPedidoContent">
+		<div class = visualizarPedidoRow>
+			<div>
+				<label id="labelNome">Nome: {{pedido.cliente.nome}}</label>
+			</div>				
+			<div>
+				<label id="labelTelefone">Telefone: {{pedido.cliente.telefone}}</label>
+			</div>
+		</div>
+
+		<div class = visualizarPedidoRow>
+			<div>
+				<label id="labelDataPedido">Data do pedido: {{pedido.dataPedido}}</label>
+			</div>				
+			<div>
+				<label id="labelDataEntrega">Data de entrega: {{pedido.dataPedido}}</label>
+				
+			</div>
+			
+		</div>
+		<div class = visualizarPedidoRow>
+				 
+			<div>
+
+				<label id="labelLocalRetirada">Local de Retirada: {{pedido.localRetirada}}
+					<input type="text" id="inputLocalRetirada" name="inputLocalRetirada"></label>
+			</div>
+			<div>
+				<label id="labelCondiçãoPagamento">Condição de pagamento: {{pedido.condicaoPagamento}}</label>
+			</div>
+		</div>
+
+		<div class = visualizarPedidoRow>
+
+			<div>
+				<label id="labelDesconto">Desconto: {{pedido.desconto}}</label>
+			</div>
+			<div>
+				<label id="labelTipoDesconto">Tipo de desconto: {{pedido.tipoDesconto}}</label>
+			</div>
+
+		</div>
+
+		<div class = visualizarPedidoRow>
+				<label>Produto:</label>	
+				<tr *ngFor="let a of produtos" name="listaProdutos">
+				   <td name="linhaProduto">{{a.nome}}</td>
+				   <td name="linhaProduto">{{a.}}</td>
+				   
+				</tr>
+		</div>
+
+		<label>Pago:
+			<input type="checkbox" ng-model="pago" ng-init="pago=false" />
+		</label>
+		<label>Entregue: 
+			<input type="checkbox" ng-model="entregue" ng-init="entregue=false" />
+		</label>
+		<label>Cancelado: 
+		 	<input type="checkbox" ng-model="cancelado" ng-init="cancelado=false" />
+		</label>
+		
+		 
+</div>
