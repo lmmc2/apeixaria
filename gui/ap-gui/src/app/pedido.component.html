@@ -51,9 +51,15 @@
 
 		<div class = visualizarPedidoRow>
 				<label id="labelListaProdutos">Produto:</label>	
-				<tr *ngFor="let a of produtos" name="listaProdutos">
-				   <td name="linhaProduto">{{a.nome}}</td>
-				   <td name="linhaProduto">{{a.}}</td>
+				<tr *ngFor="let a of pedidos.lista" name="listaProdutos">
+				   <th>Nome</th>
+				   <th>Quantidade</th>
+				   <th>Valor</th>
+				</tr>
+				<tr *ngFor="let a of pedidos.lista" name="listaProdutos">
+				   <td name="linhaProduto">{{a.produto.nome}}</td>
+				   <td name="linhaProduto">{{a.quantidade}}</td>
+				   <td name="linhaProduto">{{a.valor}}</td>
 				   
 				</tr>
 		</div>
